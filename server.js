@@ -6,6 +6,10 @@ const io = require("socket.io")(http);
 /**
  * "/"にアクセスがあったらindex.htmlを返却
  */
+ app.get("/", (req, res) => {
+  //console.log('9');
+  res.sendFile(__dirname + "/index.html");
+});
 app.get("/PR", (req, res) => {
   //console.log('9');
   res.sendFile(__dirname + "/PR.html");
